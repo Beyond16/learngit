@@ -1,0 +1,18 @@
+#版本回退： git reset --hard HEAD^
+# HEAD当前版本  HEAD^上一个版本 HEAD^^上两个版本 HEAD~100
+
+
+#撤销修改：
+1）未添加到暂存区：git checkout --<filename>
+2) 添加到暂存区： git reset HEAD <filename>
+
+#删除文件
+
+1）rm <file>，删除的是工作区的文件，此时版本库里的文件还在
+   通过  git checkout -- <file>恢复
+2）git rm <file>，删除的是暂存区和工作区的文件，可通过
+    git reset HEAD <file>恢复暂存区的文件,
+    git checkout <file>恢复工作区文件
+3）若要删除版本库文件，则在2）的基础上提交修改即可
+    git commit -m "remove <file>"
+若要恢复，通过版本回退的方式恢复。
