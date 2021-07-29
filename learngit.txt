@@ -16,3 +16,10 @@
 3）若要删除版本库文件，则在2）的基础上提交修改即可
     git commit -m "remove <file>"
 若要恢复，通过版本回退的方式恢复。
+
+#关联远程库
+关联到一个远程库： git remote add origin https://github.com/../...git
+
+推送内容到远程库： git push origin master
+
+
