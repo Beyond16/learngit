@@ -43,3 +43,31 @@
 # 我们在merge两个分支时候，可以不用将整个master全merge到dev，而可以通过：
     git cherry-pick <修改id号>
  将master最近的一次提交合并到dev。
+
+
+#每次需要改动版本库，先新建一个分支，在分支上改动。
+ 但是要删除未merge的分支，需要执行：
+     git merge -D <分支名>
+
+
+# 多人协作远程库
+1)c查看远程库信息  git remote -v
+2)clone远程master分支和dev分支 
+   git clone https://...
+   git checkout -b origin/dev
+3)将自己的本地分支推送到远程  git push origin  <branch name>
+4)若推送失败，说明远程库的提交比本地新，此时需要先将远程库分支拉到本地
+   git pull 
+   git pull失败，是没有指定本地dev和远程origin/dev分支的连接，
+   git branch --set-upstream <branch name> <origin/dev>
+   然后再  git pull
+
+#打标签
+ 可以给commit的版本号打标签，这样更容易记住。
+   git tag <tagname> 给默认最后一次commit打标签。
+   git tag <tagname> <id>
+   git tag -a <tagname> -m "version xx" <id>
+
+   git tag 查看所有tag
+
+
