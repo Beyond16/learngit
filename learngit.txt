@@ -40,3 +40,6 @@
  其他分支工作完后切回原来分支，可通过： git stash list查看存储的状态
  通过 git stash pop 恢复原状态并删除记录信息。
 
+# 我们在merge两个分支时候，可以不用将整个master全merge到dev，而可以通过：
+    git cherry-pick <修改id号>
+ 将master最近的一次提交合并到dev。
