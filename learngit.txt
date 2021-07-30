@@ -23,3 +23,20 @@
 推送内容到远程库： git push origin master
 
 
+#创建与合并分支：git branch dev 
+ 切换到指定分支：git checkout dev
+ 查看所有分支：  git branch
+ 在分支dev下做了最新提交，切回到master分支，通过：
+                 git merge dev
+ 将master分支同步到dev分支
+ 若在dev分支上执行 git merge master，则提示已经三最新提交。
+
+ 同步后删除dev分支：git branch -d dev
+
+
+
+#存储当前分支工作状态并切换到其他分支： git stash 
+
+ 其他分支工作完后切回原来分支，可通过： git stash list查看存储的状态
+ 通过 git stash pop 恢复原状态并删除记录信息。
+
